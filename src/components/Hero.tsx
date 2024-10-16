@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="relative bg-cover bg-center h-[500px] bg-[url('https://via.placeholder.com/1500x500')]">
+    <section className="relative bg-cover bg-center h-[500px] bg-[url('https://dummyimage.com/1500x500')]">
       <div className="absolute inset-0 bg-black opacity-40"></div>
       <div className="relative z-10 container mx-auto flex flex-col items-center justify-center h-full text-white">
         <h1 className="text-4xl font-bold mb-4">Find Your Perfect Stay</h1>
