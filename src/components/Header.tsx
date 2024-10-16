@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as AirbnbLogoIcon } from "../assets/images/logos/AirbnbLogoIcon.svg";
-import { ReactComponent as AirbnbLogoText } from "../assets/images/logos/AirbnbLogoText.svg";
+import { ReactComponent as AirbnbLogoIconWithText } from "../assets/images/logos/AirbnbLogoIconWithText.svg";
 import "../index.css";
 
 const Header = () => {
@@ -11,8 +11,14 @@ const Header = () => {
         <nav>
           <ul className="flex space-x-6">
             <a href="/">
-              <AirbnbLogoIcon className="airbnb-logo" />
-              <AirbnbLogoText className="airbnb-logo" />
+              {/* Show the first logo on small screens */}
+              <div className="block lg:hidden">
+                <AirbnbLogoIcon className="airbnb-logo" />
+              </div>
+              {/* Show the second logo on larger screens */}
+              <div className="hidden lg:block">
+                <AirbnbLogoIconWithText className="airbnb-logo" />
+              </div>
             </a>
             <li className="text-gray-700">Become a Host</li>
             <li className="text-gray-700">Help</li>

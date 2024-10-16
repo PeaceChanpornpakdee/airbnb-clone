@@ -17,8 +17,6 @@ code {
 }
 
 .airbnb-logo {
-  width: 30px;
-  height: auto;
   fill: black;
   transition: fill 0.3s ease;
 }
