@@ -41,11 +41,14 @@ const menus = [
 
 const Menubar = () => {
   return (
-    <div className="container mx-auto flex justify-between items-center px-4">
-      <div className="flex justify-between">
+    <div className="container mx-auto px-4">
+      <div className="flex justify-between items-center">
         {menus.map((menu) => (
-          <div key={menu.id} className="px-1 min-w-14">
-            <img src={menu.image} alt={menu.title} className="w-6 h-6" />
+          <div
+            key={menu.id}
+            className="flex flex-col items-center px-1 min-w-14"
+          >
+            <img src={menu.image} alt={menu.title} className="w-6 h-6 mb-1" />
             <span className="text-xs text-zinc-500 text-center font-medium">
               {menu.title}
             </span>
