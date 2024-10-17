@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import ToggleSwitch from "./ToggleSwitch";
 
 const menus = [
   {
@@ -40,13 +41,19 @@ const menus = [
 ];
 
 const Menubar = () => {
+  const [isOn, setIsOn] = useState(false);
+
+  const handleToggle = () => {
+    setIsOn(!isOn);
+  };
+
   return (
     <div className="container mx-auto px-4">
       <div className="flex justify-between items-center">
         {menus.map((menu) => (
           <div
             key={menu.id}
-            className="flex flex-col items-center px-1 min-w-14"
+            className="flex flex-col items-center px-2 min-w-14"
           >
             <img src={menu.image} alt={menu.title} className="w-6 h-6 mb-1" />
             <span className="text-xs text-zinc-500 text-center font-medium">
@@ -54,6 +61,12 @@ const Menubar = () => {
             </span>
           </div>
         ))}
+        <div className="border border-neutral-300 rounded-xl flex items-center px-4 py-2.5 gap-x-2">
+          <span className="text-xs text-zinc-500 text-center font-medium">
+            Display total before taxes
+          </span>
+          <ToggleSwitch isOn={isOn} onToggle={handleToggle} />
+        </div>
       </div>
     </div>
   );
