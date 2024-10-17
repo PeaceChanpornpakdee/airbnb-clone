@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ToggleSwitch from "./ToggleSwitch";
+import { ReactComponent as FilterIcon } from "../assets/images/icons/FilterIcon.svg";
 
 const menus = [
   {
@@ -48,7 +49,7 @@ const Menubar = () => {
   };
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="mx-auto px-6 lg:px-10">
       <div className="flex justify-between items-center">
         {menus.map((menu) => (
           <div
@@ -61,6 +62,12 @@ const Menubar = () => {
             </span>
           </div>
         ))}
+        <div className="border border-neutral-300 rounded-xl flex items-center px-4 py-4 gap-x-2">
+          <FilterIcon className="w-4 h-4" />
+          <span className="text-xs text-zinc-500 text-center font-medium">
+            Filters
+          </span>
+        </div>
         <div className="border border-neutral-300 rounded-xl flex items-center px-4 py-2.5 gap-x-2">
           <span className="text-xs text-zinc-500 text-center font-medium">
             Display total before taxes
