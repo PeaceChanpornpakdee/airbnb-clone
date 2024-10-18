@@ -5,8 +5,8 @@ import "../index.css";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-md py-4">
-      <div className="container mx-auto flex justify-between items-center px-4">
+    <header className="bg-white py-6">
+      <div className="mx-auto flex justify-between items-center px-6 lg:px-10">
         <a href="/">
           {/* Show the first logo on small screens */}
           <div className="block lg:hidden">
@@ -18,8 +18,8 @@ const Header = () => {
           </div>
         </a>
         <nav>
-          <ul className="flex space-x-6">
-            <li className="text-gray-700">Become a Host</li>
+          <ul className="flex space-x-6 font-medium text-sm">
+            <li className="text-gray-700">Airbnb your home</li>
             <li className="text-gray-700">Help</li>
             <li className="text-gray-700">Sign In</li>
           </ul>
