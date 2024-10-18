@@ -49,31 +49,33 @@ const Menubar = () => {
   };
 
   return (
-    <div className="mx-auto px-6 lg:px-10">
-      <div className="flex justify-between items-center">
-        {menus.map((menu) => (
-          <div
-            key={menu.id}
-            className="flex flex-col items-center px-2 min-w-14"
-          >
-            <img src={menu.image} alt={menu.title} className="w-6 h-6 mb-1" />
-            <span className="text-xs text-zinc-500 text-center font-medium">
-              {menu.title}
-            </span>
-          </div>
-        ))}
-        <div className="border border-neutral-300 rounded-xl flex items-center px-4 py-4 gap-x-2">
+    <div className="h-20 flex items-center px-6 lg:px-10">
+      <div className="flex flex-1 flex-row">
+        <div className="flex flex-1 justify-between items-center overflow-x-auto">
+          {menus.map((menu) => (
+            <div
+              key={menu.id}
+              className="flex flex-col shrink-0 items-center px-2 min-w-14"
+            >
+              <img src={menu.image} alt={menu.title} className="w-6 h-6 mb-2" />
+              <span className="text-xs text-zinc-500 text-center font-medium">
+                {menu.title}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="border border-neutral-300 rounded-xl flex shrink-0 items-center px-4 py-4 gap-x-2 ml-4">
           <FilterIcon className="w-4 h-4" />
           <span className="text-xs text-zinc-500 text-center font-medium">
             Filters
           </span>
         </div>
-        <div className="border border-neutral-300 rounded-xl flex items-center px-4 py-2.5 gap-x-2">
-          <span className="text-xs text-zinc-500 text-center font-medium">
-            Display total before taxes
-          </span>
-          <ToggleSwitch isOn={isOn} onToggle={handleToggle} />
-        </div>
+      </div>
+      <div className="border border-neutral-300 rounded-xl flex shrink-0 items-center px-4 py-2.5 gap-x-2 ml-4">
+        <span className="text-xs text-zinc-500 text-center font-medium">
+          Display total before taxes
+        </span>
+        <ToggleSwitch isOn={isOn} onToggle={handleToggle} />
       </div>
     </div>
   );
