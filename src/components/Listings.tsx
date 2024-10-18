@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as StarIcon } from "../assets/images/icons/StarIcon.svg";
 
 const listings = [
   {
@@ -25,26 +26,48 @@ const listings = [
     title: "Luxury Villa",
     price: "$500/night",
   },
+  {
+    id: 5,
+    image: "https://dummyimage.com/400",
+    title: "Modern City Apartment",
+    price: "$250/night",
+  },
+  {
+    id: 6,
+    image: "https://dummyimage.com/400",
+    title: "Luxury Villa",
+    price: "$500/night",
+  },
 ];
 
 const Listings = () => {
   return (
-    <section className="container mx-auto px-4 py-8">
-      <h2 className="text-2xl font-bold mb-6">Available Listings</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="mx-auto py-3 px-6 lg:px-10 xl:px-20">
+      {/* <h2 className="text-2xl font-bold mb-6">Available Listings</h2> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
         {listings.map((listing) => (
           <div
             key={listing.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300"
+            className="bg-white overflow-hidden transform hover:scale-105 transition duration-300"
           >
-            <img
-              src={listing.image}
-              alt={listing.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold">{listing.title}</h3>
-              <p className="text-gray-600">{listing.price}</p>
+            <div className="w-full relative pb-[95%] rounded-xl overflow-hidden">
+              <img
+                src={listing.image}
+                alt={listing.title}
+                className="absolute top-0 left-0 w-full h-full object-cover"
+              />
+            </div>
+            <div className="pt-3 text-[15px] grid grid-cols-[1fr_48px] grid-rows-4 grid-flow-col">
+              <h3 className="font-medium">{listing.title}</h3>
+              <p className="text-gray-600 col-span-2">City Views</p>
+              <p className="text-gray-600 col-span-2">Oct 29 - Nov 3</p>
+              <p className="text-gray-600 col-span-2 mt-1 font-semibold">
+                {listing.price}
+              </p>
+              <div className="flex items-center gap-1">
+                <StarIcon className="w-3" />
+                <p className="text-gray-600">4.75</p>
+              </div>
             </div>
           </div>
         ))}
