@@ -5,8 +5,8 @@ import "../index.css";
 
 const Header = () => {
   return (
-    <header className="bg-white py-6">
-      <div className="mx-auto flex justify-between items-center px-6 lg:px-10">
+    <header className="bg-white py-6 border-b border-slate-200">
+      <div className="mx-auto flex justify-between items-center px-6 lg:px-10 xl:px-20">
         <a href="/">
           {/* Show the first logo on small screens */}
           <div className="block lg:hidden">
