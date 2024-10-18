@@ -4,37 +4,43 @@ import { ReactComponent as StarIcon } from "../assets/images/icons/StarIcon.svg"
 const listings = [
   {
     id: 1,
-    image: "https://dummyimage.com/400",
+    image:
+      "https://a0.muscache.com/im/ml/photo_enhancement/pictures/miso/Hosting-616470083732125587/original/f13ad82b-ef72-4e51-ab63-6af69d93b253.jpeg?im_w=720",
     title: "Beautiful Beach House",
     price: "$200/night",
   },
   {
     id: 2,
-    image: "https://dummyimage.com/400",
+    image:
+      "https://a0.muscache.com/im/pictures/airflow/Hosting-16245152/original/b453bc0d-824b-4dd8-a8a9-64a9a71ea8be.jpg?im_w=720",
     title: "Cozy Cabin in the Woods",
     price: "$150/night",
   },
   {
     id: 3,
-    image: "https://dummyimage.com/400",
+    image:
+      "https://a0.muscache.com/im/ml/photo_enhancement/pictures/miso/Hosting-616470083732125587/original/f13ad82b-ef72-4e51-ab63-6af69d93b253.jpeg?im_w=720",
     title: "Modern City Apartment",
     price: "$250/night",
   },
   {
     id: 4,
-    image: "https://dummyimage.com/400",
+    image:
+      "https://a0.muscache.com/im/pictures/airflow/Hosting-16245152/original/b453bc0d-824b-4dd8-a8a9-64a9a71ea8be.jpg?im_w=720",
     title: "Luxury Villa",
     price: "$500/night",
   },
   {
     id: 5,
-    image: "https://dummyimage.com/400",
+    image:
+      "https://a0.muscache.com/im/pictures/airflow/Hosting-16245152/original/b453bc0d-824b-4dd8-a8a9-64a9a71ea8be.jpg?im_w=720",
     title: "Modern City Apartment",
     price: "$250/night",
   },
   {
     id: 6,
-    image: "https://dummyimage.com/400",
+    image:
+      "https://a0.muscache.com/im/ml/photo_enhancement/pictures/miso/Hosting-616470083732125587/original/f13ad82b-ef72-4e51-ab63-6af69d93b253.jpeg?im_w=720",
     title: "Luxury Villa",
     price: "$500/night",
   },
