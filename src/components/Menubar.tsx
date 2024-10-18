@@ -61,7 +61,7 @@ const Menubar = () => {
   };
 
   return (
-    <div className="h-20 flex items-center px-6 lg:px-10 xl:px-20">
+    <div className="h-24 flex items-center px-6 lg:px-10 xl:px-20">
       <div className="flex flex-1 flex-row">
         <div className="flex flex-1 justify-between items-center overflow-x-auto">
           {menus.map((menu) => (

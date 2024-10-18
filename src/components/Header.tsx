@@ -2,11 +2,12 @@ import React from "react";
 import { ReactComponent as AirbnbLogoIcon } from "../assets/images/logos/AirbnbLogoIcon.svg";
 import { ReactComponent as AirbnbLogoIconWithText } from "../assets/images/logos/AirbnbLogoIconWithText.svg";
 import "../index.css";
+import SearchBlock from "./SearchBlock";
 
 const Header = () => {
   return (
-    <header className="bg-white py-6 border-b border-slate-200">
-      <div className="mx-auto flex justify-between items-center px-6 lg:px-10 xl:px-20">
+    <header className="flex flex-col gap-6 items-center bg-white py-6 border-b border-slate-200">
+      <div className="w-full mx-auto flex justify-between items-center px-6 lg:px-10 xl:px-20">
         <a href="/">
           {/* Show the first logo on small screens */}
           <div className="block lg:hidden">
@@ -25,6 +26,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
+      <SearchBlock />
     </header>
   );
 };
