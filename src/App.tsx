@@ -4,7 +4,6 @@ import Menubar from "./components/Menubar";
 // import Hero from "./components/Hero";
 // import ShrinkingHeader from "./components/ShrinkingHeader";
 import Listings from "./components/Listings";
-import ChevronButton from "./components/ChevronButton";
 
 const App = () => {
   return (
@@ -13,7 +12,6 @@ const App = () => {
       <Menubar />
       {/* <ShrinkingHeader /> */}
       {/* <Hero /> */}
-      <ChevronButton onClick={() => console.log("Hi")} />
       <Listings />
     </div>
   );
